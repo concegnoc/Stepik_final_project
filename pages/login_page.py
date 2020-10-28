@@ -23,3 +23,13 @@ class LoginPage(BasePage):
         self.browser.find_element(*LoginPageLocators.REGISTRATION_REPEAT_PASSWORD_LINK)
         # реализуйте проверку, что есть форма регистрации на странице
         assert True, "No such elements of registration form"
+
+    def register_new_user(self, email, password):
+        email1 = self.browser.find_element(*LoginPageLocators.REGISTRATION_EMAIL_LINK)
+        email1.send_keys(email)
+        password1 = self.browser.find_element(*LoginPageLocators.REGISTRATION_PASSWORD_LINK)
+        password1.send_keys(password)
+        password2 = self.browser.find_element(*LoginPageLocators.REGISTRATION_REPEAT_PASSWORD_LINK)
+        password2.send_keys(password)
+        button = self.browser.find_element(*LoginPageLocators.REGISTRATION_BUTTON_LINK)
+        button.click()

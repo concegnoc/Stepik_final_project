@@ -7,6 +7,7 @@ class LoginPageLocators():
     REGISTRATION_EMAIL_LINK = (By.CSS_SELECTOR, "[name='registration-email']")
     REGISTRATION_PASSWORD_LINK = (By.CSS_SELECTOR, "[name='registration-password1']")
     REGISTRATION_REPEAT_PASSWORD_LINK = (By.CSS_SELECTOR, "[name='registration-password2']")
+    REGISTRATION_BUTTON_LINK = (By.CSS_SELECTOR, "[name='registration_submit']")
 
 class ProductPageLocators():
     PRODUCT_ADD_TO_BASKET = (By.CSS_SELECTOR, "[class='btn btn-lg btn-primary btn-add-to-basket']")
@@ -18,8 +19,9 @@ class ProductPageLocators():
 
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
-    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link")       # этого селектора нет на главной странице
     BASKET_LINK = (By.CSS_SELECTOR, "a[class='btn btn-default']")
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
 class BasketPageLocators():
     EMPTY_BASKET_LINK = (By.CSS_SELECTOR, "[id='content_inner']")
