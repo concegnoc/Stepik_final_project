@@ -8,7 +8,7 @@ def pytest_addoption(parser):
 @pytest.fixture(scope="function")
 def browser(request):
     language = request.config.getoption("language")
-    link = f"http://selenium1py.pythonanywhere.com/{language}/catalogue/the-shellcoders-handbook_209?promo=midsummer"
+    link = f"http://selenium1py.pythonanywhere.com/{language}"
     browser = webdriver.Chrome()
     browser.get(link)
     yield browser
